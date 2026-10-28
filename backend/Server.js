@@ -6,6 +6,7 @@ const cors = require("cors");
 const dns = require("node:dns");
 const Item = require("./models/Item");
 
+
 dotenv.config();
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
@@ -13,7 +14,12 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 const app = express();
 
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 
@@ -83,6 +89,13 @@ app.get("/api/items/:id", async (req, res) => {
     res.status(500).json({ message: "Failed to fetch item" });
   }
 });
+
+
+require("dotenv").config();
+
+
+const cookieParser = require("cookie-parser");
+const authRoutes = require("./routes/auth");
 
 async function startServer() {
   try {

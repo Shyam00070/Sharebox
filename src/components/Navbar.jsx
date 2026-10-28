@@ -7,6 +7,7 @@ import {
   ClipboardList,
   Info,
   Radar,
+  User
 } from "lucide-react";
 import ShareBoxLogo from "./ShareboxLogo";
 
@@ -64,6 +65,14 @@ function Navbar() {
             >
               <Radar size={18} />
               <span>Radar Map</span>
+            </button>
+
+             <button
+              type="button"
+              className="flex items-center gap-2 cursor-pointer whitespace-nowrap rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 hover:text-indigo-600"
+            >
+              <User size={18} />
+              <span>Login</span>
             </button>
 
             <button

@@ -282,7 +282,7 @@ function ProductDetails() {
                   onClick={() =>
                     alert("Request functionality will be added next.")
                   }
-                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3.5 font-semibold text-white transition hover:bg-indigo-700"
+                  className="inline-flex cursor-pointer flex-1 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3.5 font-semibold text-white transition hover:bg-indigo-700"
                 >
                   <MessageCircle size={19} />
                   Request this item
@@ -291,7 +291,7 @@ function ProductDetails() {
                 <button
                   type="button"
                   onClick={() => setSaved((prev) => !prev)}
-                  className={`inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-3.5 font-medium transition ${
+                  className={`inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl border px-5 py-3.5 font-medium transition ${
                     saved
                       ? "border-indigo-200 bg-indigo-50 text-indigo-700"
                       : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
@@ -326,7 +326,7 @@ function ProductDetails() {
                   onClick={() =>
                     alert("Messaging functionality will be added next.")
                   }
-                  className="inline-flex items-center gap-2 rounded-xl border border-indigo-100 px-3 py-2.5 text-sm font-medium text-indigo-600 transition hover:bg-indigo-50"
+                  className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-indigo-100 px-3 py-2.5 text-sm font-medium text-indigo-600 transition hover:bg-indigo-50"
                 >
                   <MessageCircle size={17} />
                   Message

@@ -12,7 +12,7 @@ function Products() {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/items");
+        const response = await fetch("https://sharebox-cad4.vercel.app/api/items");
 
         if (!response.ok) {
           throw new Error("Failed to fetch items. Please try again.");
